@@ -8,8 +8,8 @@ Userbot module to help you manage a group
 
 from asyncio import sleep
 from os import remove
+
 from telethon import events
-import asyncio
 from datetime import datetime
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
@@ -23,9 +23,11 @@ from telethon.tl.functions.channels import (EditAdminRequest,
                                             EditBannedRequest,
                                             EditPhotoRequest)
 from telethon.tl.functions.messages import UpdatePinnedMessageRequest
-from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
+from telethon.tl.types import (PeerChannel, ChannelParticipantsAdmins,     
+                               ChatAdminRights,
                                ChatBannedRights, MessageEntityMentionName,
-                               MessageMediaPhoto)
+                               MessageMediaPhoto,
+                               ChannelParticipantsBots)
 
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot 
 from userbot.utils import register, errors_handler, admin_cmd
